@@ -166,7 +166,7 @@ def main(args):
     cudnn.benchmark = True
 
     # path for saving model
-    save_path = './Saved_model/{}/{}/{}/{}'.format('AAA-FODE', args.data_path, args.fraction, args.upscale_factor)
+    save_path = './Saved_model/{}/{}/{}/{}'.format('STA-FODE', args.data_path, args.fraction, args.upscale_factor)
     os.makedirs(save_path, exist_ok=True)
 
     datapath = os.path.join('../data', args.data_path)
@@ -403,7 +403,7 @@ def main(args):
             plt.figure(figsize=(6.2, 6))
             plt.axis('off')
             ax = sns.heatmap(preds[30][0], cmap="RdYlGn_r", cbar=False)
-            plt.savefig('../Figure/AAA-FODE.png', bbox_inches='tight')
+            plt.savefig('../Figure/STA-FODE.png', bbox_inches='tight')
             plt.show()
 
 
